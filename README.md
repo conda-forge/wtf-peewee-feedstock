@@ -11,6 +11,18 @@ Summary: WTForms integration for peewee models
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/wtf-peewee-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/wtf-peewee-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/wtf-peewee-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/wtf-peewee-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wtf-peewee/badges/version.svg)](https://anaconda.org/conda-forge/wtf-peewee)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wtf-peewee/badges/downloads.svg)](https://anaconda.org/conda-forge/wtf-peewee)
+
 Installing wtf-peewee
 =====================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `wtf-peewee` available on your pla
 ```
 conda search wtf-peewee --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/wtf-peewee-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/wtf-peewee-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/wtf-peewee-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/wtf-peewee-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wtf-peewee/badges/version.svg)](https://anaconda.org/conda-forge/wtf-peewee)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wtf-peewee/badges/downloads.svg)](https://anaconda.org/conda-forge/wtf-peewee)
 
 
 Updating wtf-peewee-feedstock

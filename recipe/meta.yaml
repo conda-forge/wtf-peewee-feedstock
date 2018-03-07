@@ -1,7 +1,7 @@
 {%set name = "wtf-peewee" %}
-{%set version = "0.2.6" %}
+{%set version = "3.0.0" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "41dcf298ca7d7bd1978557eb10336575976fe630b5ad5b2c6451d7a12caa3826" %}
+{%set hash_val = "acd05d136c8595da3327fcf9176fa85fdcec1f2aac51d235e46e6fc7a0871283" %}
 
 package:
   name: {{ name }}

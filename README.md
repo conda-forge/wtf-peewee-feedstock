@@ -14,9 +14,7 @@ Summary: WTForms integration for peewee models
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/wtf-peewee-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/wtf-peewee-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/wtf-peewee-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/wtf-peewee-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wtf-peewee-feedstock)
 
 Current release info
 ====================

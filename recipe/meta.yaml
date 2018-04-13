@@ -1,29 +1,31 @@
-{%set name = "wtf-peewee" %}
-{%set version = "3.0.0" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "acd05d136c8595da3327fcf9176fa85fdcec1f2aac51d235e46e6fc7a0871283" %}
+{% set name = "wtf-peewee" %}
+{% set version = "3.0.0" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "acd05d136c8595da3327fcf9176fa85fdcec1f2aac51d235e46e6fc7a0871283" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
+  noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
-    - peewee >=2.0.0
+    - peewee >=3.0.0
     - wtforms
 
 test:

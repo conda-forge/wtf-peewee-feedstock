@@ -1,8 +1,7 @@
 {% set name = "wtf-peewee" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.2" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "acd05d136c8595da3327fcf9176fa85fdcec1f2aac51d235e46e6fc7a0871283" %}
+{% set hash_val = "6d9a6587f600397a537b8b4d14d6111333a992a0f43b9f75b520275dae351a0f" %}
 
 package:
   name: {{ name }}
@@ -11,12 +10,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: {{ hash_val }}
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -39,7 +38,7 @@ about:
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  summary: 'WTForms integration for peewee models'
+  summary: WTForms integration for peewee models
 
 extra:
   recipe-maintainers:

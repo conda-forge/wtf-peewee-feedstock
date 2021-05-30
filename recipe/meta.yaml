@@ -1,30 +1,26 @@
 {% set name = "wtf-peewee" %}
-{% set version = "3.0.0" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "acd05d136c8595da3327fcf9176fa85fdcec1f2aac51d235e46e6fc7a0871283" %}
+{% set version = "3.0.2" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6d9a6587f600397a537b8b4d14d6111333a992a0f43b9f75b520275dae351a0f
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - python
+    - python >=3.6
     - pip
 
   run:
-    - python
+    - python >=3.6
     - peewee >=3.0.0
     - wtforms
 
@@ -33,6 +29,10 @@ test:
     - wtfpeewee
     - wtfpeewee.fields
     - wtfpeewee.orm
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://github.com/coleifer/wtf-peewee/
@@ -44,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jan-janssen

@@ -20,11 +20,11 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.6
     - pip
 
   run:
-    - python
+    - python >=3.6
     - peewee >=3.0.0
     - wtforms
 

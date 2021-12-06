@@ -1,5 +1,5 @@
 {% set name = "wtf-peewee" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d9a6587f600397a537b8b4d14d6111333a992a0f43b9f75b520275dae351a0f
+  sha256: faa953fe3f705d4f2b48f3c1a81c5c5a6a38f9ed1378c9a830e6efc1b0fccb15
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python >=3.6
     - pip
 
@@ -31,7 +31,7 @@ test:
     - wtfpeewee.orm
   commands:
     - pip check
-  requires: 
+  requires:
     - pip
 
 about:
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  summary: 'WTForms integration for peewee models'
+  summary: WTForms integration for peewee models
 
 extra:
   recipe-maintainers:

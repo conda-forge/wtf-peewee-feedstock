@@ -1,11 +1,11 @@
-About wtf-peewee
-================
+About wtf-peewee-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wtf-peewee-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/coleifer/wtf-peewee/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wtf-peewee-feedstock/blob/main/LICENSE.txt)
 
 Summary: WTForms integration for peewee models
 

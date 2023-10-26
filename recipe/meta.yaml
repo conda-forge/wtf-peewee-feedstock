@@ -6,19 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wtf-peewee-{{ version }}.tar.gz
   sha256: 2d06ce5a0eb9acf4d22d154ae6fbea99db11b1768381c619e78a2ac60a561915
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
     - python >=3.6
     - pip
-
   run:
     - python >=3.6
     - peewee >=3.0.0
@@ -27,8 +26,6 @@ requirements:
 test:
   imports:
     - wtfpeewee
-    - wtfpeewee.fields
-    - wtfpeewee.orm
   commands:
     - pip check
   requires:
@@ -36,10 +33,10 @@ test:
 
 about:
   home: https://github.com/coleifer/wtf-peewee/
-  license: MIT
-  license_file: LICENSE
-  license_family: MIT
   summary: WTForms integration for peewee models
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:

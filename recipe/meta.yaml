@@ -1,18 +1,18 @@
 {% set name = "wtf-peewee" %}
-{% set version = "3.0.6" %}
+{% set version = "3.0.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wtf-peewee-{{ version }}.tar.gz
-  sha256: 8196446a6e3ab64f1227fba5a8ab31be81775f73d819f75fcafecfd5c0c00b92
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8aaa589593fdcd9f288e2a39792488c539416d5752ca70b08d746bf5dae1ee8b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:

@@ -1,5 +1,5 @@
 {% set name = "wtf-peewee" %}
-{% set version = "3.0.7" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8aaa589593fdcd9f288e2a39792488c539416d5752ca70b08d746bf5dae1ee8b
+  sha256: 636795565d138392b5230de513a89cc6ad0024a76a7c806ddb4c107523b5f41a
 
 build:
   noarch: python

@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: wtf-peewee
-  version: 3.1.0
+  version: 3.2.0
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 636795565d138392b5230de513a89cc6ad0024a76a7c806ddb4c107523b5f41a
+  sha256: 3674dca713e25d2fd22a9523ecf5d7a37c60e1220fe9044fcf8153e60605c73a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,8 +25,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - peewee >=3.0.0
-    - wtforms
-
+    - wtforms >=3.0
 tests:
   - python:
       imports:

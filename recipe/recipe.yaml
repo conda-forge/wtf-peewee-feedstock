@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: wtf-peewee
-  version: 3.2.0
+  version: "3.2.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 3674dca713e25d2fd22a9523ecf5d7a37c60e1220fe9044fcf8153e60605c73a
+  sha256: 830f94a326a5790c1a17b29bc9944b30de97b6cc66e6f9d06895e3ff3a60b211
 
 build:
   number: 0
